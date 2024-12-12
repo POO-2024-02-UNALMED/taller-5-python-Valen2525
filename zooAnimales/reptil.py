@@ -18,12 +18,12 @@ class Reptil(Animal):
     @classmethod
     def crearIguana(self, nombre, edad, genero):
         Reptil.iguanas +=1
-        iguana = Reptil(nombre, edad, "pradera", genero, True, 4)
+        iguana = Reptil(nombre, edad, "humedal", genero, "verde", 3)
         return iguana
     @classmethod
     def crearSerpiente(self, nombre, edad, genero):
         Reptil.serpientes +=1
-        serp = Reptil(nombre, edad, "selva", genero, True, 4)
+        serp = Reptil(nombre, edad, "jungla", genero, "blanco", 1)
         return serp
     def novimiento(self):
         return "resptar"

@@ -17,12 +17,12 @@ class Ave(Animal):
     @classmethod
     def crearHalcon(self, nombre, edad, genero):
         Ave.halcones +=1
-        halcon = Ave(nombre, edad, "pradera", genero, True, 4)
+        halcon = Ave(nombre, edad, "montanas", genero, "cafe glorioso")
         return halcon
     @classmethod
     def crearAguila(self, nombre, edad, genero):
         Ave.aguilas +=1
-        aguila = Ave(nombre, edad, "selva", genero, True, 4)
+        aguila = Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
         return aguila
     def novimiento(self):
         return "volar"

@@ -30,7 +30,7 @@ class Mamifero(Animal):
         return self._listado
     def setListado(self, list):
         self._listado = list
-    def getPelaje(self):
+    def isPelaje(self):
         return self._pelaje
     def setPelaje(self, pelaje):
         self._pelaje = pelaje
