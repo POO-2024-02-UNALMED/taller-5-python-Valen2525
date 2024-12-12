@@ -3,6 +3,8 @@ from zooAnimales import Anfibio
 from zooAnimales import Reptil
 from zooAnimales import Pez
 from zooAnimales import Ave
+from gestion import Zona
+from gestion import Zoologico
 
 class Animal:
     _totalAnimales = 0
