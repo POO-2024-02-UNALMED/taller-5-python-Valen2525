@@ -1,5 +1,3 @@
-
-
 class Zoologico():
     def __init__(self, nombre = None, ubicacion = None, zonas = None):
         self._nombre = nombre

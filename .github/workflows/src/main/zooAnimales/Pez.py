@@ -1,12 +1,12 @@
-from zooAnimales import Animal
+from zooAnimales.Animal import Animal
 
 class Pez(Animal):
     _cantidadPeces = 0
-    def __init__(self, nombre, edad, habitat, genero, listado = [], salmones =None, bacalaos =None, colorEscamas =None, cantAletas =None):
-        super(nombre, edad, habitat, genero)
+    salmones = 0
+    bacalaos = 0
+    def __init__(self, nombre, edad, habitat, genero, listado = [], colorEscamas =None, cantAletas =None):
+        super().__init__(nombre, edad, habitat, genero)
         self._listado = listado.append(self)
-        self.salmones = salmones
-        self.bacalaos = bacalaos
         self._colorEscamas = colorEscamas
         self._cantidadAletas =cantAletas
         self._cantidadPeces += 1
@@ -14,12 +14,14 @@ class Pez(Animal):
     @classmethod
     def cantidadPeces(cls):
         return cls._cantidadPeces
+    @classmethod
     def crearSalmon(self, nombre, edad, genero):
-        salmones +=1
+        self.salmones +=1
         salmon = Pez(nombre, edad, "pradera", genero, True, 4)
         return salmon
+    @classmethod
     def crearBacalao(self, nombre, edad, genero):
-        bacalaos +=1
+        self.bacalaos +=1
         bacalao = Pez(nombre, edad, "selva", genero, True, 4)
         return bacalao
     def novimiento(self):

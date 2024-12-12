@@ -1,5 +1,3 @@
-from gestion import Zoologico
-
 class Zona():
     def __init__(self, nombre = None, zoo = None, animales = []):
         self._nombre = nombre

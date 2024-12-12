@@ -1,12 +1,13 @@
-from zooAnimales import Animal
+from zooAnimales.Animal import Animal
 
 class Reptil(Animal):
     _cantidadReptiles = 0
-    def __init__(self, nombre, edad, habitat, genero, listado = [], iguanas =None, serpientes =None, colorEscamas =None, largoCola =None):
-        super(nombre, edad, habitat, genero)
+    iguanas = 0
+    serpientes = 0
+    def __init__(self, nombre, edad, habitat, genero, listado = [], colorEscamas =None, largoCola =None):
+        super().__init__(nombre, edad, habitat, genero)
         self._listado = listado.append(self)
-        self.iguanas = iguanas
-        self.serpientes = serpientes
+        
         self._colorEscamas = colorEscamas
         self._largoCola = largoCola
         self._cantidadReptiles += 1
@@ -14,12 +15,14 @@ class Reptil(Animal):
     @classmethod
     def cantidadReptiles(cls):
         return cls._cantidadReptiles
+    @classmethod
     def crearIguana(self, nombre, edad, genero):
-        iguanas +=1
+        self.iguanas +=1
         iguana = Reptil(nombre, edad, "pradera", genero, True, 4)
         return iguana
+    @classmethod
     def crearSerpiente(self, nombre, edad, genero):
-        serpientes +=1
+        self.serpientes +=1
         serp = Reptil(nombre, edad, "selva", genero, True, 4)
         return serp
     def novimiento(self):
