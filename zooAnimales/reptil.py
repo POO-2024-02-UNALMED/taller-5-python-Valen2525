@@ -6,7 +6,7 @@ class Reptil(Animal):
     serpientes = 0
     _listado = []
     def __init__(self, nombre, edad, habitat, genero, colorEscamas =None, largoCola =None):
-        super(nombre, edad, habitat, genero)
+        super().__init__(nombre, edad, habitat, genero)
         Reptil._listado.append(self)
         self._colorEscamas = colorEscamas
         self._largoCola = largoCola
@@ -15,10 +15,12 @@ class Reptil(Animal):
     @classmethod
     def cantidadReptiles(cls):
         return cls._cantidadReptiles
+    @classmethod
     def crearIguana(self, nombre, edad, genero):
         Reptil.iguanas +=1
         iguana = Reptil(nombre, edad, "pradera", genero, True, 4)
         return iguana
+    @classmethod
     def crearSerpiente(self, nombre, edad, genero):
         Reptil.serpientes +=1
         serp = Reptil(nombre, edad, "selva", genero, True, 4)

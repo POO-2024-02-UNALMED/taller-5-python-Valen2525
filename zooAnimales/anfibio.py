@@ -2,11 +2,12 @@ from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
     _cantidadAnfibios = 0
+    _listado = []
     ranas = 0
     salamandras = 0
-    _listado = []
+
     def __init__(self, nombre, edad, habitat, genero, colorPiel =None, venenoso =None):
-        super(nombre, edad, habitat, genero)
+        super().__init__(nombre, edad, habitat, genero)
         Anfibio._listado.append(self)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
