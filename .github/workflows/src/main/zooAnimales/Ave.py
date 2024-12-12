@@ -1,4 +1,4 @@
-from zooAnimales.Animal import Animal
+from zooAnimales.animal import Animal
 
 class Ave(Animal):
     _cantidadAves = 0
@@ -11,7 +11,7 @@ class Ave(Animal):
         self._cantidadAves += 1
 
     @classmethod
-    def cantidadPAves(cls):
+    def cantidadAves(cls):
         return cls._cantidadAves
     @classmethod
     def crearHalcon(self, nombre, edad, genero):
