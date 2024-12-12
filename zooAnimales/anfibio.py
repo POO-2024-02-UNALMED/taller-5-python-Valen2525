@@ -1,12 +1,13 @@
-from zooAnimales import Animal
+from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
     _cantidadAnfibios = 0
-    def __init__(self, nombre, edad, habitat, genero, listado = [], ranas =None, salamandras =None, colorPiel =None, venenoso =None):
+    ranas = 0
+    salamandras = 0
+    _listado = []
+    def __init__(self, nombre, edad, habitat, genero, colorPiel =None, venenoso =None):
         super(nombre, edad, habitat, genero)
-        self._listado = listado.append(self)
-        self.ranas = ranas
-        self.salamandras = salamandras
+        Anfibio._listado.append(self)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
         self._cantidadAnfibios += 1
@@ -14,12 +15,14 @@ class Anfibio(Animal):
     @classmethod
     def cantidadAnfibios(cls):
         return cls._cantidadAnfibios
+    @classmethod
     def crearRana(self, nombre, edad, genero):
-        ranas +=1
+        Anfibio.ranas +=1
         rana = Anfibio(nombre, edad, "pradera", genero, True, 4)
         return rana
+    @classmethod
     def crearSalamandra(self, nombre, edad, genero):
-        salamandras +=1
+        Anfibio.salamandras +=1
         sala = Anfibio(nombre, edad, "selva", genero, True, 4)
         return sala
     def novimiento(self):
