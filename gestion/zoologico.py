@@ -1,8 +1,9 @@
 class Zoologico():
+    _zonas = []
     def __init__(self, nombre = None, ubicacion = None):
         self._nombre = nombre
         self._ubicacion = ubicacion
-        self._zonas = []
+        Zoologico._zonas.append(self)
 
     def getNombre(self):
         return self._nombre
