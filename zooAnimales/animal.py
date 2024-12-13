@@ -17,7 +17,7 @@ class Animal:
         from zooAnimales.reptil import Reptil
         from zooAnimales.pez import Pez
         from zooAnimales.ave import Ave
-        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" + "Aves: " + Ave.cantidadAves() + "\n" + "Reptiles: " + Reptil.cantidadReptiles() + "\n" + "Peces: " + Pez.cantidadPeces() + "\n" +"Anfibios: " + Anfibio.cantidadAnfibios()
+        return "Mamiferos: " , Mamifero.cantidadMamiferos() , "\n" , "Aves: " , Ave.cantidadAves() , "\n" , "Reptiles: " , Reptil.cantidadReptiles() , "\n" , "Peces: " , Pez.cantidadPeces() , "\n" ,"Anfibios: " , Anfibio.cantidadAnfibios()
     def toString(self):
         if self._zona ==None:
             return "Mi nombre es "+ self.getNombre()+", tengo una edad de " +self.getEdad()+ ", habito en "+self.getHabitat()+" y mi genero es "+self.getGenero()

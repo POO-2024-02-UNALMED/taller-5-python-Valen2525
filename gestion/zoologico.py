@@ -2,7 +2,7 @@ class Zoologico():
     def __init__(self, nombre = None, ubicacion = None, zonas = []):
         self._nombre = nombre
         self._ubicacion = ubicacion
-        self._zonas = zonas
+        self._zonas = zonas.append(self)
 
     def getNombre(self):
         return self._nombre
