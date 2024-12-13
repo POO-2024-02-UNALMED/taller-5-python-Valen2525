@@ -17,12 +17,12 @@ class Animal:
         from zooAnimales.reptil import Reptil
         from zooAnimales.pez import Pez
         from zooAnimales.ave import Ave
-        return "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\n" + "Aves: " + str(Ave.cantidadAves()) + "\n" + "Reptiles: " + str(Reptil.cantidadReptiles()) + "\n" + "Peces: " + str(Pez.cantidadPeces()) + "\n" +"Anfibios: " + str(Anfibio.cantidadAnfibios())
+        return "Mamiferos : " + str(Mamifero.cantidadMamiferos()) + "\n" + "Aves : " + str(Ave.cantidadAves()) + "\n" + "Reptiles : " + str(Reptil.cantidadReptiles()) + "\n" + "Peces : " + str(Pez.cantidadPeces()) + "\n" +"Anfibios : " + str(Anfibio.cantidadAnfibios())
     def toString(self):
         if self._zona ==None:
-            return "Mi nombre es "+ self.getNombre()+", tengo una edad de " +self.getEdad()+ ", habito en "+self.getHabitat()+" y mi genero es "+self.getGenero()
+            return "Mi nombre es "+ str(self.getNombre())+", tengo una edad de " +str(self.getEdad())+ ", habito en "+str(self.getHabitat())+" y mi genero es "+str(self.getGenero())
         else:
-            return "Mi nombre es "+ self.getNombre()+", tengo una edad de " +self.getEdad()+ ", habito en "+self.getHabitat()+" y mi genero es "+self.getGenero()+", la zona en la que me ubico es "+self.getZona().getNombre()+", en el "+ self.getZona().getZoo().getNombre()+"."
+            return "Mi nombre es "+ str(self.getNombre())+", tengo una edad de " +str(self.getEdad())+ ", habito en "+str(self.getHabitat())+" y mi genero es "+str(self.getGenero())+", la zona en la que me ubico es "+str(self.getZona().getNombre())+", en el "+ str(self.getZona().getZoo().getNombre())+"."
     def getNombre(self):
         return self._nombre
     def setNombre(self, nom):
