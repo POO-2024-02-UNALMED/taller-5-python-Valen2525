@@ -1,7 +1,6 @@
 from zooAnimales.animal import Animal
 
 class Ave(Animal):
-    _cantidadAves = 0
     halcones = 0
     aguilas = 0
     _listado = []
@@ -9,11 +8,10 @@ class Ave(Animal):
         super().__init__(nombre, edad, habitat, genero)
         Ave._listado.append(self)
         self._colorPlumas = colorPlumas
-        self._cantidadAves += 1
 
     @classmethod
     def cantidadAves(cls):
-        return cls._cantidadAves
+        return len(cls._listado)
     @classmethod
     def crearHalcon(self, nombre, edad, genero):
         Ave.halcones +=1
